@@ -1,2 +1,9 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/H5WNMtcT)
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-718a45dd9cf7e7f842a935f5ebbe5719a5e09af4491e668f4dbf3b35d5cca122.svg)](https://classroom.github.com/online_ide?assignment_repo_id=12655457&assignment_repo_type=AssignmentRepo)
+# CharacterRecognition-BackPropagation
+Character Recognition using an ANN.
+##How To use.
+- Open OCR.ipynb, this is the main script.
+- Navigate to Parameters section, this is where you can adjust all input parameters to your network, for example,
+  <br />1. Number of hidden neurons<br /> 2. learning Rate <br />3. Momentum<br />4. Size of the normalized image.<br />
+- Samples folder contain all training samples for OCR-EXTENDED font.
+- Paragraphs contain the input document(IMAGE) to be recognized. To input your own document, change the documentLocation variable to your document name.
+- CharacterRecognition file contains a three layer neural network trained using Back Propagation.
