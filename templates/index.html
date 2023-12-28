@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Character Recognition</title>
+  <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Character Recognition Project</h1>
+  </header>
+  <main>
+    <div class="upload-section">
+      <input type="file" id="imageUpload" accept="image/*">
+      <button onclick="predictCharacter()">Predict</button>
+    </div>
+    <div class="result-section">
+      <div id="imagePreview" class="image-preview"></div>
+      <div id="predictionResult" class="prediction-result"></div>
+    </div>
+  </main>
+  <footer>
+    <p>© 2023 George Youhana</p>
+  </footer>
+  <script src="static/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+/* Basic styles */
+body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+    
+    header, footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+    }
+    
+    main {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .upload-section {
+      margin-bottom: 20px;
+    }
+    
+    .image-preview img {
+      max-width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      margin-bottom: 10px;
+    }
+    
+    .prediction-result {
+      font-weight: bold;
+    }
+    
+    footer {
+      margin-top: auto;
+    }
+    
