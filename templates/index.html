@@ -3,25 +3,198 @@
 <head>
   <meta charset="UTF-8">
   <title>Character Recognition</title>
-  <link rel="stylesheet" href="static/styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+    .uploaded-photo {
+      display: none;
+      margin-top: 20px;
+      max-width: 100%;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+    }
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li {
+      display: inline;
+      margin-right: 10px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px;
+      border-radius: 5px;
+      background-color: #555;
+    }
+    nav ul li a:hover {
+      background-color: #777;
+    }
+    section {
+      padding: 20px;
+      margin-bottom: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+    p {
+      margin-bottom: 10px;
+    }
+    a {
+      color: #333;
+      text-decoration: none;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    ul {
+      margin-bottom: 10px;
+    }
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    /* BEGIN: Added CSS for about button */
+    #aboutButton {
+      background-color: #555;
+      color: #fff;
+      padding: 10px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+    #aboutButton:hover {
+      background-color: #777;
+    }
+    .file-upload {
+      display: inline-block;
+      position: relative;
+      overflow: hidden;
+      margin-top: 20px;
+    }
+    .file-upload input[type="file"] {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      opacity: 0;
+      font-size: 100px;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+    }
+    .file-upload label {
+      display: block;
+      padding: 10px 20px;
+      background-color: #555;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .file-upload label:hover {
+      background-color: #777;
+    }
+    /* END: Added CSS for file upload */
+    /* BEGIN: Added CSS for recommendations and features */
+    #recommendations,
+    #features {
+      background-color: #777;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      display: inline-block;
+      width: 49%;
+    }
+    #recommendations h2,
+    #features h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+    #recommendations ul,
+    #features ul {
+      margin-bottom: 10px;
+      color: #fff;
+    }
+    /* BEGIN: Enhanced CSS for recommendations and features */
+    #recommendations li,
+    #features li {
+      padding-left: 20px;
+      position: relative;
+    }
+    #recommendations li::before,
+    #features li::before {
+      content: "\2022";
+      position: absolute;
+      left: 0;
+      color: #fff;
+    }
+    /* END: Enhanced CSS for recommendations and features */
+    /* END: Added CSS for recommendations and features */
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Character Recognition Project</h1>
+  <header>  
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a id="aboutButton" href="about.html">About</a></li>
+      </ul>
+    </nav>
   </header>
-  <main>
-    <div class="upload-section">
-      <input type="file" id="imageUpload" accept="image/*">
-      <button onclick="predictCharacter()">Predict</button>
+  <section id="home">
+    <h1>Welcome to Character Recognition</h1>
+    <p>Start recognizing characters with our advanced OCR system.</p>
+    <a href="https://github.com/AIBabyTeaching/deep-learning-project-Geo-y20" target="_blank">Project Repository</a>
+    <p>Additional information about the project or about you can be placed here.</p>
+    <div class="file-upload">
+      <label for="imageUpload">Choose File</label>
+      <input type="file" id="imageUpload"> <!-- File upload input -->
     </div>
-    <div class="result-section">
-      <div id="imagePreview" class="image-preview"></div>
-      <div id="predictionResult" class="prediction-result"></div>
-    </div>
-  </main>
-  <footer>
-    <p>© 2023 George Youhana</p>
+    <button onclick="predictCharacter()">Predict</button> <!-- Predict button -->
+  </section>
+  <section id="about"> <!-- About section -->
+    <h2>Prediction Result</h2>
+    <p id="predictionResult"></p> <!-- Display prediction result here -->
+    <div id="imagePreview"></div> <!-- Image preview container -->
+  </section>
+  <section id="features"> <!-- Added new section for features -->
+    <h2>Features and Recommendations</h2>
+    <ul>
+      <li>High accuracy character recognition</li>
+      <li>Support for multiple languages</li>
+      <li>Easy integration with existing systems</li>
+      <li>Improve accuracy by training the OCR model with more diverse datasets.</li>
+      <li>Enhance user experience by adding real-time character recognition.</li>
+      <li>Implement a feedback system to gather user suggestions and improve the OCR system.</li>
+      <!-- BEGIN: Additional recommendation -->
+      <li>Optimize the OCR system for mobile devices to provide a seamless user experience on smartphones and tablets.</li>
+      <!-- END: Additional recommendation -->
+    </ul>
+  </section>
+  <footer> <!-- Added footer section -->
+    <p>&copy; 2023 Character Recognition. All rights reserved. | Modified by George Youhnana</p>
   </footer>
-  <script src="static/script.js"></script>
+    <script src="static/script.js"></script>
 </body>
 </html>
