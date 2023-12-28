@@ -1,12 +1,21 @@
+
 # Standard OCR Project 
 
 ## Introduction
 
-This project aims to create a highly accurate and efficient model for character recognition in images. The dataset consists of two sections: Data and Data2, each having training and testing directories with 36 subdirectories representing different character classes. The training data contains 573 images per class, while the testing data includes approximately 88 images per class. Understanding the dataset's structure is crucial for proper organization and analysis.
+This project aims to create a highly accurate and efficient model for character recognition in images. The dataset used in this project can be found [here](https://www.kaggle.com/datasets/preatcher/standard-ocr-dataset). The dataset consists of two sections: Data and Data2, each having training and testing directories with 36 subdirectories representing different character classes. The training data contains 573 images per class, while the testing data includes approximately 88 images per class. Understanding the dataset's structure is crucial for proper organization and analysis.
 
 ## Problem Statement
 
 The task is a computer vision challenge to detect characters in input images, emphasizing image processing, analysis, and modern deep learning techniques. It's more aligned with computer vision than Optical Character Recognition (OCR), utilizing various models like ResNet, Xception, Inception, and MobileNet to process and analyze the dataset for accurate predictions.
+
+## GitHub Repository
+
+The code for this project is hosted on GitHub. You can clone the repository using the following command:
+
+```bash
+gh repo clone AIBabyTeaching/deep-learning-project-Geo-y20
+```
 
 ## Solution Framework
 
@@ -38,5 +47,4 @@ The task is a computer vision challenge to detect characters in input images, em
 1. Access the application through the browser.
 2. Upload an image containing characters.
 3. Get predictions for the characters present in the image.
-
 
