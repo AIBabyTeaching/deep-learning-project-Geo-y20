@@ -1,13 +1,13 @@
 function predictCharacter() {
   const fileInput = document.getElementById('imageUpload');
-  const imagePreview = document.getElementById('imagePreview');
-  const predictionResult = document.getElementById('predictionResult');
+  const predictionOutput = document.getElementById('predictionOutput');
+  const predictionImagePreview = document.getElementById('predictionImagePreview');
 
   const file = fileInput.files[0];
   const formData = new FormData();
   formData.append('file', file);
 
-  const url = '/predict'; // Assuming there's only one prediction endpoint
+  const url = '/predict'; // Replace this with your endpoint URL
 
   fetch(url, {
     method: 'POST',
@@ -15,8 +15,8 @@ function predictCharacter() {
   })
     .then(response => response.json())
     .then(data => {
-      updatePredictionUI(predictionResult, data);
-      displayImagePreview(imagePreview, file);
+      updatePredictionUI(predictionOutput, data);
+      displayImagePreview(predictionImagePreview, file, data);
     })
     .catch(error => {
       console.error('Error:', error);
@@ -26,16 +26,24 @@ function predictCharacter() {
 function updatePredictionUI(element, prediction) {
   element.textContent = `Prediction: ${prediction.prediction}`;
 }
+// Function to handle file change (show image preview)
+function handleFileChange(event) {
+  const file = event.target.files[0];
+  displayImagePreview(file);
+}
 
-function displayImagePreview(element, file) {
+function displayImagePreview(file) {
   const reader = new FileReader();
 
   reader.onload = function (event) {
     const img = new Image();
     img.src = event.target.result;
 
-    element.innerHTML = '';
-    element.appendChild(img);
+    img.onload = function () {
+      const imagePreview = document.getElementById('imagePreview');
+      imagePreview.src = img.src;
+      imagePreview.style.display = 'block';
+    };
   };
 
   if (file) {
@@ -43,6 +51,7 @@ function displayImagePreview(element, file) {
   }
 }
 
+document.getElementById('imageUpload').addEventListener('change', handleFileChange);
 // Event listener for scrolling to sections
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
@@ -57,3 +66,5 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+

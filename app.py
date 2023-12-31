@@ -81,10 +81,9 @@ def upload_file():
 
     return jsonify({'error': 'File not allowed or unsupported format'})
 
-# Route to serve the script.js file
-@app.route('/js/<path:filename>')
+@app.route('/<path:filename>')
 def serve_js(filename):
-    return send_from_directory('static/js', filename)
-
+    return send_from_directory('static', filename)
+    
 if __name__ == '__main__':
     app.run(debug=True)
