@@ -47,8 +47,9 @@ gh repo clone AIBabyTeaching/deep-learning-project-Geo-y20
 2. Upload an image containing characters.
 3. Get predictions for the characters present in the image.
 
-## Sample Of Project
-![Image Alt Text](sample_images_of_web/sample_1.jpg)
-![Home Page](sample_images_of_web/sample_2.jpg)
+## Download the Model
+
+To download the H5 model file, click [here](https://drive.google.com/file/d/1RlZ0oqee9UgcBOi5w07dTNKwsJ8nOaD1/view?usp=sharing).
+
 
 
