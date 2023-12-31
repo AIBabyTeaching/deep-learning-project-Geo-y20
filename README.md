@@ -1,4 +1,3 @@
-
 # Standard OCR Project 
 
 ## Introduction
@@ -47,4 +46,4 @@ gh repo clone AIBabyTeaching/deep-learning-project-Geo-y20
 1. Access the application through the browser.
 2. Upload an image containing characters.
 3. Get predictions for the characters present in the image.
-
+```
