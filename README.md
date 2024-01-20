@@ -51,5 +51,9 @@ gh repo clone AIBabyTeaching/deep-learning-project-Geo-y20
 
 To download the H5 model file, click [here](https://drive.google.com/file/d/1RlZ0oqee9UgcBOi5w07dTNKwsJ8nOaD1/view?usp=sharing).
 
-
+  <h2>Sample Images</h2>
+    <p>
+      <img src="https://drive.google.com/uc?export=view&id=1MzsL6GlmHYlLxPBp8vJ1VMuzp_URVfQF" alt="Sample 1">
+      <img src="https://drive.google.com/uc?export=view&id=1APZ0ElDgxUzDTL36ovjwbZmSL3fWxUVt" alt="Sample 2">
+    </p>
 
